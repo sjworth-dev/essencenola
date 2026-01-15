@@ -1,0 +1,47 @@
+# Site settings
+title: Essence NOLA
+description: The ultimate guide to Essence Festival with your squad. Your crew. Your culture. Your weekend.
+url: "https://essencenola.com"
+baseurl: ""
+
+# SEO
+author: Essence NOLA
+twitter:
+  card: summary_large_image
+social:
+  name: Essence NOLA
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: rouge
+
+# Collections
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
